@@ -28,6 +28,10 @@ app.listen(3000, async() => {
     // tweet.comments.push(comment);
     // await tweet.save();
 
-    const tweet = await tweetRepo.getWithComments('659f8d97b436a315a1dcb36d');
+    // const tweet = await tweetRepo.getWithComments('659f8d97b436a315a1dcb36d');
+    // const tweet = await tweetRepo.getAll(0, 4);
+    // console.log(tweet[0].contentWithEmail);
+
+    const tweet = await tweetRepo.create({content: 'With hooks'});
     console.log(tweet);
 });
